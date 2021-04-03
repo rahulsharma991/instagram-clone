@@ -2,4 +2,8 @@ import { DefaultTheme } from 'react-native-paper'
 
 export const theme = {
     ...DefaultTheme,
+    colors: {
+        ...DefaultTheme.colors,
+        dark: "#2f3640"
+    }
 }

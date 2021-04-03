@@ -1,21 +1,27 @@
 import React from 'react';
 import {
   StyleSheet,
-  Text,
-  View
+  View,
+  SafeAreaView
 } from 'react-native';
+import Signup from './Screens/Signup';
 
 function App() {
   return (
-    <View>
-      <Text>Help</Text>
-    </View>
+    <SafeAreaView style={styles.container}>
+      <View style={styles.contentWrap}>
+        <Signup />
+      </View>
+    </SafeAreaView>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    padding: 5,
+    backgroundColor: "#2f3640",
+  },
+  contentWrap: {
+    padding: 24,
   }
 });
 
