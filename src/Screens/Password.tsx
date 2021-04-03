@@ -6,7 +6,7 @@ export default function Signup({
 
 }) {
     const { colors } = useTheme();
-    const [username, setUsername] = React.useState<string>('');
+    const [password, setPassword] = React.useState<string>('');
     return (
         <View style={styles.container}>
             <View style={styles.titleWrap}>
@@ -15,9 +15,9 @@ export default function Signup({
             </View>
             <TextInput
                 label="Password"
-                value={username}
+                value={password}
                 mode={'outlined'}
-                onChangeText={value => setUsername(value)}
+                onChangeText={value => setPassword(value)}
                 style={styles.input}
                 textContentType={"password"}
             />

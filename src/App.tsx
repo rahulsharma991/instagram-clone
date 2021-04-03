@@ -6,12 +6,13 @@ import {
 } from 'react-native';
 import Signup from './Screens/Username';
 import Password from './Screens/Password';
+import Login from './Screens/Login';
 
 function App() {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.contentWrap}>
-        <Password />
+        <Login />
       </View>
     </SafeAreaView>
   );
