@@ -4,13 +4,14 @@ import {
   View,
   SafeAreaView
 } from 'react-native';
-import Signup from './Screens/Signup';
+import Signup from './Screens/Username';
+import Password from './Screens/Password';
 
 function App() {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.contentWrap}>
-        <Signup />
+        <Password />
       </View>
     </SafeAreaView>
   );
