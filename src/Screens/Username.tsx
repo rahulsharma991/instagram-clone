@@ -1,3 +1,5 @@
+/* eslint-disable prettier/prettier */
+
 import * as React from 'react';
 import { View, StyleSheet } from 'react-native';
 import { Text, useTheme, TextInput, Button } from 'react-native-paper';
@@ -19,7 +21,7 @@ export default function Signup({
                 mode={'outlined'}
                 onChangeText={value => setUsername(value)}
                 style={styles.input}
-                textContentType={"username"}
+                textContentType={'username'}
             />
             <Button onPress={() => {console.log('clicked!')}} mode={'contained'}>Next</Button>
         </View>
@@ -49,10 +51,10 @@ const styles = StyleSheet.create({
     input: {
         height: 48,
         borderRadius: 2,
-        backgroundColor: "#718093",
-        color: "#ffff",
-        borderColor: "#ffff",
-        marginBottom: 10
+        backgroundColor: '#718093',
+        color: '#ffff',
+        borderColor: '#ffff',
+        marginBottom: 10,
         
     }
 

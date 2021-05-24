@@ -1,74 +1,49 @@
+/* eslint-disable prettier/prettier */
 import * as React from 'react';
-import { Text, TextInput, Button } from 'react-native-paper';
-import { View, StyleSheet } from 'react-native';
+import { View, StyleSheet, Image } from 'react-native';
+import FlatButton from '../shared/FlatButton.js';
 
 export default function Login() {
-    const [username, setUsername] = React.useState<string>('');
-    const [password, setPassword] = React.useState<string>('');
-
     return (
-        <View style={styles.container}>
-            <Text style={styles.title}>Instagram</Text>
-            <View>
-                <TextInput
-                    label="Username, Phone and Email"
-                    value={username}
-                    onChangeText={value => setUsername(value)}
-                    mode={'outlined'}
-                    style={styles.input}
-                    textContentType={"password"}
-                />
-                <TextInput
-                    label="Password"
-                    value={password}
-                    mode={'outlined'}
-                    onChangeText={value => setPassword(value)}
-                    style={styles.input}
-                    textContentType={"password"}
-                />
-                <Button onPress={() => {console.log('clicked!')}} mode={'contained'} style={styles.btn}>Login</Button>
-            </View>
-            <View style={styles.footer}>
-                <Text style={styles.ftr_text}>Diden't have an account? <Text style={styles.link}>Create New</Text></Text>
+        <>
+        <View style={styles.upperContainer}>
+        <View style={styles.imageContainer}>
+            <Image source={require('../assets/groceriesLogo.png')} />
             </View>
         </View>
+        <View style={styles.lowerContainer}>
+            <View  style={styles.buttonContainer}>
+                <FlatButton text="create account" buttonColor="transparent" textColor="black" buttonBorder="#6D757D"/>
+                <FlatButton text="sign in" buttonColor="#6D757D" textColor="white"/>
+
+            </View>
+        </View>
+        </>
     )
 };
 
 const styles = StyleSheet.create({
-    container: {
-        height: '100%',
+    upperContainer: {
+        height: '50%',
+        backgroundColor: '#6D757D',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
     },
-    title: {
-        textAlign: 'center',
-        fontSize: 30,
-        fontWeight: '600',
-        marginBottom: 20,
+     lowerContainer: {
+        height: '50%',
+        backgroundColor: '#fff',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        paddingHorizontal: 30,
     },
-    input: {
-        height: 48,
-        borderRadius: 2,
-        backgroundColor: "#718093",
-        color: "#ffff",
-        borderColor: "#ffff",
-        marginBottom: 10
+    imageContainer: {
+        padding: 20,
+        backgroundColor: '#fff',
+        borderRadius: 50,
     },
-    btn: {
-        marginTop: 30,
-    },
-    footer: {
-        justifyContent: 'flex-end',
-        alignSelf: 'center',
-        borderTopWidth: StyleSheet.hairlineWidth,
-        paddingTop: 10,
-        marginTop: 40,
+    buttonContainer: {
         width: '100%',
-        alignContent: 'center'
     },
-    link: {
-        color: '#4a69bd'
-    },
-    ftr_text: {
-        textAlign: 'center'
-    }
 })
